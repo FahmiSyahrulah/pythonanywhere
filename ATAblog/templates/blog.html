@@ -2,30 +2,22 @@
 {% load static%}
 {% block content %}
         <div id="artikel">
+            <a href="{% url 'post-new' %}">Tambah post</a>
             <div class="container">
                 <div class="row d-flex justify-content-center py-4">
+                    {% for data in blogs %}
                     <div class="col-9 d-flex justify-content-center">
                         <div class="card">
-                            <img class="card-img-top" src="{% static 'images/kendala-sepulsa.jpg' %}" alt="Card image cap">
+                            <img class="card-img-top" src="{{data.image}}" alt="Card image cap">
                                 <div class="card-body">
-                                    <h7 class="card-title">25 September 2018</h7>
-                                    <h4 class="card-title">Punya kendala? Hubungi segera Customer service sepulsa!</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h7 class="card-title">{{data.tanggal}}</h7>
+                                    <h4 class="card-title">{{data.judul}}</h4>
+                                    <p class="card-text">{{data.deskripsi}}</p>
                                     <a href="#">baca selengkapnya</a>
                                 </div>
                         </div>        
                     </div>
-                    <div class="col-9 d-flex justify-content-center">
-                        <div class="card">
-                                <img class="card-img-top" src="{% static 'images/sms.png' %}" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h7 class="card-title">26 September 2018</h7>
-                                        <h4 class="card-title">OTP, Si Kode rahasia yang berbahaya</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#">baca selengkapnya</a>
-                                    </div>
-                        </div>       
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
