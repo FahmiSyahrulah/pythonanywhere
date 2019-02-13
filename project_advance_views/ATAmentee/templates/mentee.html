@@ -1,0 +1,38 @@
+{% extends "headerfooter.html"%}
+{% load static%}
+{% block content %}
+        <div id="main-desc"> <!-- START MAIN CONTENT -->
+            <div class="container-fluid container-content">
+                <div class="row justify-content-center">
+                    <h4>Our Mentees</h4>
+                </div>
+                <div id="row-content" class="row pt-2">
+                    <div class="col-md-6 text-right">
+                        <img class="img-fluid mx-auto" id="img-mentee" src="{% static 'images/jobs.png' %}" alt=""><br>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Steve Jobs</h5>
+                        <p>i learn so much from ATA</p>
+                    </div>
+                </div>
+                <div id="row-content" class="row">
+                    <div class="col-md-6 text-right">
+                        <img class="img-fluid mx-auto" id="img-mentee" src="{% static 'images/mark.png' %}" alt=""><br>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Mark Zuckerberg</h5>
+                        <p>Me Too</p>
+                    </div>
+                </div>
+                <div id="row-content" class="row pb-5">
+                    <div class="col-md-6 text-right">
+                        <img class="img-fluid mx-auto" id="img-mentee" src="{% static 'images/wong.png' %}" alt=""><br>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Larry Page</h5>
+                        <p>Same as above</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END main-content-->
+{% endblock %}

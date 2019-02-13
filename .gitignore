@@ -1,0 +1,6 @@
+*.pyc
+*~
+__pychace__
+env_project_advance_view
+db.sqlite3
+.DS_Store
